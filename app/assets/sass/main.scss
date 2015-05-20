@@ -1,0 +1,19 @@
+/*
+  Main SASS file for realtime storage
+*/
+
+// Variables
+$brand-color: #205081;
+
+// Imports
+@import "typography";
+
+// Reset Styles
+body {
+  margin:0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin:0;
+  display:block;
+}
