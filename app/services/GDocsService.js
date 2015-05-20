@@ -14,7 +14,7 @@ GDocs.factory('GDocs', function ($http, $routeParams, $cookieStore) {
   };
 
   function fetchDocs() {
-    $http.get('https://www.googleapis.com/drive/v2/files', config).then( handleSuccess, handleError );
+    return $http.get('https://www.googleapis.com/drive/v2/files', config).then( handleSuccess, handleError );
   }
 
   function handleSuccess( response ) {
