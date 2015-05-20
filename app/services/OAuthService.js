@@ -1,12 +1,13 @@
 var OAuth = angular.module('OAuth', [ 'ngCookies']);
 
-OAuth.factory('OAuth', function ($http, $routeParams, $cookieStore) {
+OAuth.factory('OAuth', function ($http, $routeParams, $cookieStore, $location) {
   var api = {
-    auth_url: auth_url,
+    authURL: authURL,
     auth: auth,
+    validAuth: validAuth,
   };
 
-  function auth_url() {
+  function authURL() {
     var clientID = "822166841586-0l34mn5s7u7egt6bfc8b740fca5qmq7k.apps.googleusercontent.com";
     var driveScope = "https://www.googleapis.com/auth/drive";
     var redirectURL = "http://goo.gl/B8AYiZ"; // link shortened to localhost
@@ -27,9 +28,17 @@ OAuth.factory('OAuth', function ($http, $routeParams, $cookieStore) {
       callback && callback();
 
     } else {
-      // failed login redirect
-      console.log('hello!');
-      // window.location.replace('');
+
+      $location.url('/'); // not logged in
+
+    }
+  }
+
+  function validAuth() {
+    if ( $cookieStore.get('token') ) {
+      return true;
+    } else {
+      return false;
     }
   }
 

@@ -1,13 +1,15 @@
-rtStorage.controller('fileController', function($scope, $routeParams, $http) {
-  $scope.token = $routeParams.access_token;
+rtStorage.controller('fileController', function($scope, $location, OAuth) {
 
-  $scope.response = "nothing";
-
-  $scope.getFiles = function () {
-    $http.get('https://www.googleapis.com/drive/v2/files').success(function (response) {
-      $scope.response = response;
-      console.log(response);
-    });
+  $scope.checkAuth = function() {
+    if ( OAuth.validAuth() ) {
+      $location.url('/files');
+    } else {
+      $location.url('/');
+    }
   };
+
+  
+
+  $scope.checkAuth();
 
 });
