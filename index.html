@@ -7,15 +7,24 @@
   <!-- stylesheets -->
   <link rel="stylesheet" href="./app/assets/main.css">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,600italic,400italic,300italic' rel='stylesheet' type='text/css'>
-
-  <!-- angular includes -->
+  <link rel="stylesheet" href="http://i.icomoon.io/public/temp/4c90af9d7b/LizLake/style.css">
 
   <!-- dependancies -->
+  <link rel="stylesheet" href="bower_components/angular-spinkit/build/angular-spinkit.min.css">
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-mocks/angular-mocks.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-spinkit/build/angular-spinkit.min.js"></script>
+
+  <!-- angular includes -->
+  <script src="app/app.js"></script>
+  <script src="app/controllers/loginController.js"></script>
 
 </head>
-  <body ng-app="contactApp">
+  <body ng-app="rtStorage">
 
-    <div ng-view ></div>
+    <div ng-view class="container"></div>
 
     <footer>
       <p>Designed & Developed by <a href="http://tomchinery.com/" target="_blank">Tom Chinery</a></p>

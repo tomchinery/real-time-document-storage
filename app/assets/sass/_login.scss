@@ -1,0 +1,36 @@
+section.login {
+  width:70%;
+  margin:0 auto;
+  height:500px;
+  text-align:center;
+
+  h1 {
+    margin:100px 0 40px 0;
+  }
+
+  h2 {
+    margin-bottom:80px;
+  }
+
+  a {
+    color:$brand-color;
+    text-decoration:none;
+    padding:40px;
+    border-radius:4px;
+    border:2px solid $brand-color;
+    margin:0px 20px;
+    @include transition;
+
+    span {
+      font-size:1.60em;
+      position:relative;
+      top:5px;
+    }
+
+    &:hover {
+      color:white;
+      background-color:$brand-color;
+    }
+  }
+
+}

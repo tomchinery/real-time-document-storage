@@ -1,0 +1,5 @@
+@mixin transition {
+  transition:all 0.5s;
+  -webkit-transition:all 0.5s;
+  -moz-transition:all 0.5s;
+}

@@ -4,9 +4,15 @@
 
 // Variables
 $brand-color: #205081;
+$light-grey: #999;
+$text-color: #333;
+$link-color: #3572b0;
 
 // Imports
+@import "mixins";
 @import "typography";
+@import "login";
+@import "footer";
 
 // Reset Styles
 body {
@@ -16,4 +22,10 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin:0;
   display:block;
+}
+
+// Global Styles
+.container {
+  max-width:1200px;
+  margin:0 auto;
 }
