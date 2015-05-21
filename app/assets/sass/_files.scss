@@ -3,11 +3,16 @@ section.files {
   margin:0 auto;
 
   h3 {
-    margin:40px 0 30px 0;
+    margin:60px 0 30px 0;
     text-align:center;
     font-weight:400;
     display:inline-block;
     color:$brand-color;
+
+    span.last_loaded {
+      font-size:12px;
+      color:$light-grey;
+    }
   }
 
   .logout {
@@ -18,7 +23,7 @@ section.files {
     border:2px solid $brand-color;
     color:$brand-color;
     float:right;
-    margin:35px 10px;
+    margin:50px 10px;
     background-color:white;
     border-radius:4px;
     font-size:1.4em;

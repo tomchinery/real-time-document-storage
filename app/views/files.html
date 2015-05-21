@@ -1,9 +1,15 @@
-<section class="files">
+<div ng-include="'app/views/_upload.html'"></div>
 
-  <h3><span class="icon-google-drive"></span> Google Drive File Listing</h3>
+<section class="files" ng-controller="fileController">
 
-<!--   <button type="button" title="Sign out" class="logout">Sign Out</button>
- -->
+  <h3>
+    <span class="icon-google-drive"></span>
+    Google Drive File Listing
+    <br/>
+    <span class="last_loaded" ng-show="!loading"> Last Updated: {{ loaded | datetime }} </span>
+    <span class="last_loaded" ng-show="loading"> Loading... </span>
+  </h3>
+
   <button type="button" title="Upload a file"><span class="icon-cloud-upload"></span></button>
 
   <ul>

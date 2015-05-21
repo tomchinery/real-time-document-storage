@@ -1,6 +1,8 @@
 rtStorage.controller('fileController', function($scope, $location, OAuth, GDocs, $interval, $route) {
 
   $scope.files = '';
+  $scope.loaded = '';
+  $scope.loading = true;
 
   $scope.checkAuth = function() {
     if ( !OAuth.validAuth() ) {
@@ -9,15 +11,19 @@ rtStorage.controller('fileController', function($scope, $location, OAuth, GDocs,
   };
 
   $scope.fileListing = function () {
+    $scope.loading = true;
+
     GDocs.fetchFiles().then(function (resp) {
 
       $scope.files = resp.items;
-      console.log(resp);
 
-      if (resp.error) {
-        $location.path('/cheese');
+      if (resp.error != null) {
+        $location.path('/');
       }
 
+    }).finally(function () {
+      $scope.loaded = new Date;
+      $scope.loading = false;
     });
   };
 
