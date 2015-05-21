@@ -19,7 +19,21 @@ GDocs.factory('GDocs', function ($http, $cookieStore) {
   }
 
   function uploadFile( file ) {
-    return $http.post('https://www.googleapis.com/drive/v2/files?uploadType=multipart' + '&access_token=' + $cookieStore.get('token'), file).then( handleSuccess, handleError );
+    var url = 'https://www.googleapis.com/upload/drive/v2/files?uploadType=multipart' + '&access_token=' + $cookieStore.get('token');
+    var fd = new FormData();
+
+    var fileConfig = {
+      transformRequest: angular.identity,
+      headers: { 'Content-Type': undefined }
+    };
+
+    fd.append('metadata', new Blob(['{ "title": "The File" }'], {
+      type: 'application/json'
+    }));
+
+    fd.append('file', file); // send as form data
+
+    return $http.post(url, fd, fileConfig).then( handleSuccess, handleError );
   }
 
   function handleSuccess( response ) {
