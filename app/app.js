@@ -10,7 +10,7 @@ rtStorage.config(['$routeProvider', function ($routeProvider) {
 
   .when('/access_token=:access_token&token_type=:token_type', {
     templateUrl: 'app/views/files.html',
-    controller: 'fileController',
+    controller: 'loginController',
   })
 
   .when('/files', {
