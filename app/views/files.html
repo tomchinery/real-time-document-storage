@@ -2,11 +2,15 @@
 
   <h3><span class="icon-google-drive"></span> Google Drive File Listing</h3>
 
+<!--   <button type="button" title="Sign out" class="logout">Sign Out</button>
+ -->
+  <button type="button" title="Upload a file"><span class="icon-cloud-upload"></span></button>
+
   <ul>
     <li class="header">
       <div class="name"> Name: </div>
       <div class="extension"> Type: </div>
-      <div class="date"> Date: </div>
+      <div class="date"> Modified Date: </div>
     </li>
     <li ng-repeat="file in files">
       <div class="name">
@@ -18,7 +22,7 @@
       </div>
 
       <div class="date">
-        {{ file.modifiedDate }}
+        {{ file.modifiedDate | datetime }}
       </div>
 
       <div class="download">

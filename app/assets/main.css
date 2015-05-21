@@ -52,34 +52,65 @@ section.login {
 
 footer {
   text-align: center;
-  clear: both; }
-
-section.files h3 {
+  clear: both;
   margin: 40px;
-  text-align: center;
-  font-weight: 400; }
-section.files ul {
-  list-style-type: none;
+  font-size: 14px; }
+
+section.files {
   width: 75%;
   margin: 0 auto; }
-  section.files ul li div {
-    display: inline-block; }
-  section.files ul li {
-    padding: 10px 0;
-    border-bottom: 1px solid #d7d7d7; }
-section.files li img {
-  padding: 0 10px;
-  height: 16px; }
-section.files li .name {
-  width: 40%; }
-section.files li .extension,
-section.files li .date,
-section.files li .download {
-  width: 19%; }
-section.files li.header {
-  color: #999999;
-  border-bottom: 3px solid #d7d7d7;
-  font-size: 14px; }
+  section.files h3 {
+    margin: 40px 0 30px 0;
+    text-align: center;
+    font-weight: 400;
+    display: inline-block;
+    color: #205081; }
+  section.files .logout {
+    font-size: 19px; }
+  section.files button {
+    border: 2px solid #205081;
+    color: #205081;
+    float: right;
+    margin: 35px 10px;
+    background-color: white;
+    border-radius: 4px;
+    font-size: 1.4em;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s; }
+    section.files button:hover {
+      background-color: #205081;
+      color: white; }
+  section.files ul {
+    list-style-type: none;
+    padding: 0; }
+    section.files ul li div {
+      display: inline-block; }
+    section.files ul li {
+      padding: 10px 0;
+      border-bottom: 1px solid #d7d7d7; }
+  section.files li img {
+    padding: 0 10px;
+    height: 16px; }
+  section.files li .name {
+    width: 35%; }
+  section.files li .extension,
+  section.files li .download {
+    width: 19%; }
+  section.files li .date {
+    width: 24%; }
+  section.files li .download {
+    text-align: center; }
+  section.files li:hover {
+    background-color: rgba(32, 80, 129, 0.15); }
+  section.files li.header {
+    color: #999999;
+    border-bottom: 3px solid #d7d7d7;
+    font-size: 14px; }
+    section.files li.header:hover {
+      background-color: transparent; }
 
 body {
   margin: 0; }

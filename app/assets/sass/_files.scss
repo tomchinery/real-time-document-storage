@@ -1,14 +1,40 @@
 section.files {
+  width:75%;
+  margin:0 auto;
+
   h3 {
-    margin:40px;
+    margin:40px 0 30px 0;
     text-align:center;
     font-weight:400;
+    display:inline-block;
+    color:$brand-color;
+  }
+
+  .logout {
+    font-size:19px;
+  }
+
+  button {
+    border:2px solid $brand-color;
+    color:$brand-color;
+    float:right;
+    margin:35px 10px;
+    background-color:white;
+    border-radius:4px;
+    font-size:1.4em;
+    padding:10px;
+    cursor:pointer;
+    @include transition;
+
+    &:hover {
+      background-color:$brand-color;
+      color:white;
+    }
   }
 
   ul {
     list-style-type:none;
-    width:75%;
-    margin:0 auto;
+    padding:0;
 
     li div {
       display:inline-block;
@@ -27,13 +53,24 @@ section.files {
     }
 
     .name {
-      width:40%;
+      width:35%;
     }
 
     .extension,
-    .date,
     .download {
       width:19%;
+    }
+
+    .date {
+      width:24%;
+    }
+
+    .download {
+      text-align:center;
+    }
+
+    &:hover {
+      background-color:$light-brand;
     }
   }
 
@@ -41,5 +78,9 @@ section.files {
     color:$light-grey;
     border-bottom:3px solid $border-grey;
     font-size:14px;
+
+    &:hover {
+      background-color:transparent;
+    }
   }
 }
