@@ -3,6 +3,7 @@ var GDocs = angular.module('GDocs', ['ngCookies']);
 GDocs.factory('GDocs', function ($http, $cookieStore) {
   var api = {
     fetchFiles: fetchFiles,
+    uploadFile: uploadFile,
   };
 
   var config = {
@@ -17,7 +18,12 @@ GDocs.factory('GDocs', function ($http, $cookieStore) {
     return $http.get('https://www.googleapis.com/drive/v2/files', config).then( handleSuccess, handleError );
   }
 
+  function uploadFile( file ) {
+    return $http.post('https://www.googleapis.com/drive/v2/files?uploadType=multipart' + '&access_token=' + $cookieStore.get('token'), file).then( handleSuccess, handleError );
+  }
+
   function handleSuccess( response ) {
+    console.log(response);
     return response.data;
   }
 

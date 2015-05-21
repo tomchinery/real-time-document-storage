@@ -94,6 +94,8 @@ section.files {
     section.files ul li {
       padding: 10px 0;
       border-bottom: 1px solid #d7d7d7; }
+      section.files ul li:last-child {
+        border-bottom: 3px solid #d7d7d7; }
   section.files li img {
     padding: 0 10px;
     height: 16px; }

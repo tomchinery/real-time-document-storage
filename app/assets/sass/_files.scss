@@ -48,6 +48,10 @@ section.files {
     li {
       padding:10px 0;
       border-bottom:1px solid $border-grey;
+
+      &:last-child {
+        border-bottom:3px solid $border-grey;
+      }
     }
   }
 
