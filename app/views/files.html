@@ -4,10 +4,11 @@
 
   <table>
     <tr ng-repeat="document in documents">
-      <td class="filename"> {{ document.title }} </td>
+      <td class="filename"><a href="{{ document.alternateLink }}" target="_blank">{{ document.title }}</a></td>
       <td class="extension">{{ document.fileExtension }}</td>
       <td class="size">{{ document.fileSize }}</td>
       <td class="date">{{ document.modifiedDate }}</td>
+      <td class="download"><a href="{{ document.webContentLink }}" target="_blank">Download</a></td>
     </tr>
   </table>
 

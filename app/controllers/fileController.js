@@ -13,11 +13,10 @@ rtStorage.controller('fileController', function($scope, $location, OAuth, GDocs,
   $scope.docListing = function () {
     GDocs.fetchDocs().then(function (doc) {
       $scope.documents = doc.items;
-      console.log(doc.items);
     });
   };
 
-  $scope.checkAuth(); // check user is authenticated 
+  $scope.checkAuth(); // check user is authenticated
   $scope.docListing();
 
   $interval($scope.docListing, 10000); // nearest to realtime data

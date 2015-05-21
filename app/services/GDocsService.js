@@ -22,6 +22,7 @@ GDocs.factory('GDocs', function ($http, $routeParams, $cookieStore) {
   }
 
   function handleError( response ) {
+    console.log(response);
     return response.status;
   }
 
