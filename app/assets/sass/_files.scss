@@ -1,0 +1,45 @@
+section.files {
+  h3 {
+    margin:40px;
+    text-align:center;
+    font-weight:400;
+  }
+
+  ul {
+    list-style-type:none;
+    width:75%;
+    margin:0 auto;
+
+    li div {
+      display:inline-block;
+    }
+
+    li {
+      padding:10px 0;
+      border-bottom:1px solid $border-grey;
+    }
+  }
+
+  li {
+    img {
+      padding:0 10px;
+      height:16px;
+    }
+
+    .name {
+      width:40%;
+    }
+
+    .extension,
+    .date,
+    .download {
+      width:19%;
+    }
+  }
+
+  li.header {
+    color:$light-grey;
+    border-bottom:3px solid $border-grey;
+    font-size:14px;
+  }
+}

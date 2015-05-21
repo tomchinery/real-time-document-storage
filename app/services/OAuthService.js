@@ -22,6 +22,7 @@ OAuth.factory('OAuth', function ($routeParams, $cookieStore, $location, $interva
   }
 
   function auth(callback) {
+
     if ( $routeParams.access_token ) {
 
       $cookieStore.remove('token'); // clear previous tokens

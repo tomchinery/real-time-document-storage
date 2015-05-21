@@ -14,6 +14,9 @@ h2 {
   color: #999999;
   font-size: 1.6em; }
 
+h3 {
+  font-size: 1.4em; }
+
 a {
   color: #3572b0;
   text-decoration: none; }
@@ -50,6 +53,33 @@ section.login {
 footer {
   text-align: center;
   clear: both; }
+
+section.files h3 {
+  margin: 40px;
+  text-align: center;
+  font-weight: 400; }
+section.files ul {
+  list-style-type: none;
+  width: 75%;
+  margin: 0 auto; }
+  section.files ul li div {
+    display: inline-block; }
+  section.files ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #d7d7d7; }
+section.files li img {
+  padding: 0 10px;
+  height: 16px; }
+section.files li .name {
+  width: 40%; }
+section.files li .extension,
+section.files li .date,
+section.files li .download {
+  width: 19%; }
+section.files li.header {
+  color: #999999;
+  border-bottom: 3px solid #d7d7d7;
+  font-size: 14px; }
 
 body {
   margin: 0; }

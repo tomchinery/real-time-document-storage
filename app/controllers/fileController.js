@@ -15,7 +15,7 @@ rtStorage.controller('fileController', function($scope, $location, OAuth, GDocs,
       console.log(resp);
 
       if (resp.error) {
-        $location.path('/');
+        $location.path('/cheese');
       }
 
     });

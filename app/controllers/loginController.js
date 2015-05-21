@@ -1,11 +1,9 @@
 rtStorage.controller('loginController', function($scope, OAuth, $cookieStore, $location, $interval) {
 
   $scope.setAuthCookie = function () {
-    OAuth.auth();
-
-    if ( $cookieStore.get('token') ) {
+    OAuth.auth(function () {
       $location.path('/files');
-    }
+    });
   };
 
   $scope.googleLogin = function () {

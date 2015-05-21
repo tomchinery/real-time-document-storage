@@ -1,15 +1,31 @@
 <section class="files">
 
-  <h3>Google Drive File Listing</h3>
+  <h3><span class="icon-google-drive"></span> Google Drive File Listing</h3>
 
-  <table>
-    <tr ng-repeat="file in files">
-      <td class="filename"><a href="{{ file.alternateLink }}" target="_blank">{{ file.title }}</a></td>
-      <td class="extension">{{ file.fileExtension }}</td>
-      <td class="size">{{ file.fileSize }}</td>
-      <td class="date">{{ file.modifiedDate }}</td>
-      <td class="download"><a href="{{ file.webContentLink }}" target="_blank">Download</a></td>
-    </tr>
-  </table>
+  <ul>
+    <li class="header">
+      <div class="name"> Name: </div>
+      <div class="extension"> Type: </div>
+      <div class="date"> Date: </div>
+    </li>
+    <li ng-repeat="file in files">
+      <div class="name">
+        <a href="{{ file.alternateLink }}" target="_blank"><img src="{{ file.iconLink }}" alt="file-icon"> {{ file.title }}</a>
+      </div>
+
+      <div class="extension">
+        {{ file.fileExtension }}
+      </div>
+
+      <div class="date">
+        {{ file.modifiedDate }}
+      </div>
+
+      <div class="download">
+        <a href="{{ file.webContentLink }}" target="_blank">Download</a>
+      </div>
+
+    </li>
+  </ul>
 
 </section>

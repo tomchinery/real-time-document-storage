@@ -7,12 +7,14 @@ $brand-color: #205081;
 $light-grey: #999;
 $text-color: #333;
 $link-color: #3572b0;
+$border-grey: #D7D7D7;
 
 // Imports
 @import "mixins";
 @import "typography";
 @import "login";
 @import "footer";
+@import "files";
 
 // Reset Styles
 body {
