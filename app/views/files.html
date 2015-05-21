@@ -3,12 +3,12 @@
   <h3>Google Drive File Listing</h3>
 
   <table>
-    <tr ng-repeat="document in documents">
-      <td class="filename"><a href="{{ document.alternateLink }}" target="_blank">{{ document.title }}</a></td>
-      <td class="extension">{{ document.fileExtension }}</td>
-      <td class="size">{{ document.fileSize }}</td>
-      <td class="date">{{ document.modifiedDate }}</td>
-      <td class="download"><a href="{{ document.webContentLink }}" target="_blank">Download</a></td>
+    <tr ng-repeat="file in files">
+      <td class="filename"><a href="{{ file.alternateLink }}" target="_blank">{{ file.title }}</a></td>
+      <td class="extension">{{ file.fileExtension }}</td>
+      <td class="size">{{ file.fileSize }}</td>
+      <td class="date">{{ file.modifiedDate }}</td>
+      <td class="download"><a href="{{ file.webContentLink }}" target="_blank">Download</a></td>
     </tr>
   </table>
 

@@ -1,10 +1,10 @@
-rtStorage.controller('loginController', function($scope, OAuth, $cookieStore, $location) {
+rtStorage.controller('loginController', function($scope, OAuth, $cookieStore, $location, $interval) {
 
   $scope.setAuthCookie = function () {
     OAuth.auth();
 
     if ( $cookieStore.get('token') ) {
-      $location.url('/files');
+      $location.path('/files');
     }
   };
 

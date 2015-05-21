@@ -1,24 +1,29 @@
-rtStorage.controller('fileController', function($scope, $location, OAuth, GDocs, $interval) {
+rtStorage.controller('fileController', function($scope, $location, OAuth, GDocs, $interval, $route) {
 
-  $scope.documents = '';
+  $scope.files = '';
 
   $scope.checkAuth = function() {
-    if ( OAuth.validAuth() ) {
-      $location.url('/files');
-    } else {
-      $location.url('/');
+    if ( !OAuth.validAuth() ) {
+      $location.path('/');
     }
   };
 
-  $scope.docListing = function () {
-    GDocs.fetchDocs().then(function (doc) {
-      $scope.documents = doc.items;
+  $scope.fileListing = function () {
+    GDocs.fetchFiles().then(function (resp) {
+
+      $scope.files = resp.items;
+      console.log(resp);
+
+      if (resp.error) {
+        $location.path('/');
+      }
+
     });
   };
 
   $scope.checkAuth(); // check user is authenticated
-  $scope.docListing();
+  $scope.fileListing();
 
-  $interval($scope.docListing, 10000); // nearest to realtime data
+  $interval($scope.fileListing, 10000); // nearest to realtime data without using feeds
 
 });

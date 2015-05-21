@@ -1,6 +1,6 @@
 var OAuth = angular.module('OAuth', [ 'ngCookies']);
 
-OAuth.factory('OAuth', function ($http, $routeParams, $cookieStore, $location) {
+OAuth.factory('OAuth', function ($routeParams, $cookieStore, $location, $interval) {
   var api = {
     authURL: authURL,
     auth: auth,
@@ -24,7 +24,10 @@ OAuth.factory('OAuth', function ($http, $routeParams, $cookieStore, $location) {
   function auth(callback) {
     if ( $routeParams.access_token ) {
 
+      $cookieStore.remove('token'); // clear previous tokens
+
       $cookieStore.put('token', $routeParams.access_token);
+
       callback && callback();
 
     } else {
@@ -35,6 +38,9 @@ OAuth.factory('OAuth', function ($http, $routeParams, $cookieStore, $location) {
   }
 
   function validAuth() {
+    // check token is still valid / alive
+    // if not renew token
+
     if ( $cookieStore.get('token') ) {
       return true;
     } else {

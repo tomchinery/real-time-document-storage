@@ -1,8 +1,8 @@
 var GDocs = angular.module('GDocs', ['ngCookies']);
 
-GDocs.factory('GDocs', function ($http, $routeParams, $cookieStore) {
+GDocs.factory('GDocs', function ($http, $cookieStore) {
   var api = {
-    fetchDocs: fetchDocs,
+    fetchFiles: fetchFiles,
   };
 
   var config = {
@@ -13,7 +13,7 @@ GDocs.factory('GDocs', function ($http, $routeParams, $cookieStore) {
     }
   };
 
-  function fetchDocs() {
+  function fetchFiles() {
     return $http.get('https://www.googleapis.com/drive/v2/files', config).then( handleSuccess, handleError );
   }
 
@@ -22,8 +22,12 @@ GDocs.factory('GDocs', function ($http, $routeParams, $cookieStore) {
   }
 
   function handleError( response ) {
-    console.log(response);
-    return response.status;
+    var error = {
+      "error": response.status,
+      "message": "Error: " + response.statusText
+    };
+
+    return error;
   }
 
   return api;
