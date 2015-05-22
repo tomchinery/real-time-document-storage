@@ -1,6 +1,6 @@
 ## Synopsis
 
-![Alt text](http://app/assets/images/screenshot.png "Optional title")
+![ScreenShot](screenshot.png)
 
 An angular app that uses Google Drive to view a users files, upload new files or
 delete existing ones.
