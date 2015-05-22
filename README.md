@@ -8,7 +8,7 @@ delete existing ones.
 
 Login via oAuth2.
 
-You can find the app running [here.](http://tomchinery.com/rtds/) 
+You can find the app running [here.](http://tomchinery.com/rtds/)
 
 ## Installation
 
@@ -24,9 +24,9 @@ To setup OAuth with
 Google Drive on your web server you will have to setup a new project in the [Google Console](https://code.google.com/apis/console) to allow access to user data.
 Ensure you have enabled the Google Drive API
 and that you have filled in the correct credentials for the project. Your redirect
-url should be same as your project root.
+url should be same as your base url.
 
-Edit line 7 of index.html with the correct base url (same as project root):
+Edit line 7 of index.html with the correct base url:
 ```
   <base href="http://example.com" target="_blank">
 ```
