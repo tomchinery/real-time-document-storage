@@ -8,6 +8,8 @@ delete existing ones.
 
 Login via oAuth2.
 
+You can find the app running [here.](http://tomchinery.com/rtds/files). 
+
 ## Installation
 
 Presuming NodeJS is installed clone the repository to your desired location and run:
@@ -19,8 +21,8 @@ Presuming NodeJS is installed clone the repository to your desired location and 
 Ensure index.html is being served up by your web server.
 
 To setup OAuth with
-Google Drive on your server you will have to setup a new project in the Google
-Console to allow access to user data. Ensure you have enabled the Google Drive API
+Google Drive on your web server you will have to setup a new project in the [Google Console](https://code.google.com/apis/console) to allow access to user data.
+Ensure you have enabled the Google Drive API
 and that you have filled in the correct credentials for the project. Your redirect
 url should be same as your project root.
 
@@ -29,7 +31,7 @@ Edit line 7 of index.html with the correct base url (same as project root):
   <base href="http://example.com" target="_blank">
 ```
 
-Finally update the auth_url method with your client_id and redirect url
+Finally update the auth_url method with your client_id and redirect url in
 app/services/OAuthService.js:
 ```
   function authURL() {
