@@ -1,4 +1,4 @@
-var rtStorage = angular.module('rtStorage', ['ngRoute', 'ngAnimate', 'angular-spinkit', 'OAuth', 'ngCookies', 'GDocs']);
+var rtStorage = angular.module('rtStorage', ['ngRoute', 'ngAnimate', 'angular-spinkit', 'OAuth', 'ngCookies', 'GDocs', 'angular-loading-bar']);
 
 rtStorage.config(['$routeProvider', function ($routeProvider) {
   $routeProvider

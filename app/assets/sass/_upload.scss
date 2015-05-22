@@ -1,3 +1,31 @@
+#loading-bar .bar {
+  background:$brand-color;
+}
+
+div.fading-circle-spinner {
+  margin:20px auto;
+}
+
 section.upload {
-  
+  border-top:1px solid $border-grey;
+  border-bottom:1px solid $border-grey;
+
+  h5 {
+    color:$brand-color;
+    margin:10px 0;
+  }
+
+  label {
+    font-size:12px;
+  }
+
+  input[type="file"] {
+    margin-bottom:12px;
+  }
+
+  .error {
+    color:$error;
+    font-weight:bold;
+  }
+
 }

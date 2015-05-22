@@ -1,5 +1,3 @@
-<div ng-include="'app/views/_upload.html'"></div>
-
 <section class="files" ng-controller="fileController">
 
   <h3>
@@ -10,7 +8,9 @@
     <span class="last_loaded" ng-show="loading"> Loading... </span>
   </h3>
 
-  <button type="button" title="Upload a file"><span class="icon-cloud-upload"></span></button>
+  <!-- <button type="button" title="Upload a file"><span class="icon-cloud-upload"></span></button> -->
+
+  <div ng-include="'app/views/_upload.html'"></div>
 
   <ul>
     <li class="header">
@@ -19,7 +19,7 @@
       <div class="date"> Modified Date: </div>
     </li>
     <li ng-repeat="file in files">
-      
+
       <div class="name">
         <a href="{{ file.alternateLink }}" target="_blank"><img src="{{ file.iconLink }}" alt="file-icon"> {{ file.title }}</a>
       </div>

@@ -1,9 +1,18 @@
 <section class="upload" ng-controller="uploadController">
 
-  <input type="file" accept=".jpg, .png, .pdf" file-model="file"/>
-  <label>New filename (optional):</label>
-  <input type="text" ng-model="fileName">
+  <h5>Upload a file</h5>
+  <div ng-show="!uploading">
+    <label class="error" ng-show="showNameError">Filename extension must be .jpg, .png or .pdf <br></label>
+    <label class="error" ng-show="showNoFileError">You need to select a file to upload<br></label>
 
-  <input type="submit" value="Upload" ng-click="upload()">
+    <input type="file" accept=".jpg, .png, .pdf" file-model="file"/>
+
+    <label>New filename (optional):</label>
+    <input type="text" ng-model="fileName">
+
+    <input type="submit" value="Upload" ng-click="upload()" >
+  </div>
+
+  <fading-circle-spinner ng-show="uploading"></fading-circle-spinner>
 
 </section>

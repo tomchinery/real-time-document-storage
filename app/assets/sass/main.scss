@@ -9,6 +9,7 @@ $text-color: #333;
 $link-color: #3572b0;
 $border-grey: #D7D7D7;
 $light-brand: rgba(32, 80, 129, 0.15);
+$error: #d43f3a;
 
 // Imports
 @import "mixins";
@@ -16,6 +17,7 @@ $light-brand: rgba(32, 80, 129, 0.15);
 @import "login";
 @import "footer";
 @import "files";
+@import "upload";
 
 // Reset Styles
 body {
