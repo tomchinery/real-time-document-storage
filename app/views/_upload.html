@@ -1,6 +1,9 @@
 <section class="upload" ng-controller="uploadController">
 
   <input type="file" accept=".jpg, .png, .pdf" file-model="file"/>
+  <label>New filename (optional):</label>
+  <input type="text" ng-model="fileName">
+
   <input type="submit" value="Upload" ng-click="upload()">
 
 </section>
