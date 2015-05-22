@@ -16,6 +16,8 @@ Presuming NodeJS is installed clone the repository to your desired location and 
     npm install
 ```
 
+Make sure index.html is being served up by your web server.
+
 ## Tests
 
 The test suite is written with Karma and Jasmine. To run the test server run:
@@ -45,3 +47,7 @@ angular-spinkit: "~0.3.3"
 angular-cookies: "~1.3.15"
 
 angular-loading-bar: "~0.7.1"
+
+## Todo
+
+Improve test suite to cover whole application.
