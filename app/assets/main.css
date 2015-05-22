@@ -101,13 +101,17 @@ section.files {
     height: 16px; }
   section.files li .name {
     width: 35%; }
-  section.files li .extension,
-  section.files li .download {
+  section.files li .extension {
     width: 19%; }
+  section.files li .download {
+    width: 10%;
+    text-align: center; }
+  section.files li .delete {
+    width: 9%;
+    color: #d43f3a;
+    text-align: center; }
   section.files li .date {
     width: 24%; }
-  section.files li .download {
-    text-align: center; }
   section.files li:hover {
     background-color: rgba(32, 80, 129, 0.15); }
   section.files li.header {

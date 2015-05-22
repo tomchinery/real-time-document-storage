@@ -27,6 +27,20 @@ rtStorage.controller('fileController', function($scope, $location, OAuth, GDocs,
     });
   };
 
+  $scope.delete = function ( id ) {
+    var youSure = confirm('Are you sure you want to delete this file?');
+
+    if ( youSure ) {
+      GDocs.deleteFile( id ).then(function () {
+        $scope.fileListing();
+      });
+    }
+  };
+
+  $scope.$on('uploaded', function(event, data) { // refresh files when upload completes
+    $scope.fileListing();
+  });
+
   $scope.checkAuth(); // check user is authenticated
   $scope.fileListing();
 

@@ -21,7 +21,7 @@
     <li ng-repeat="file in files">
 
       <div class="name">
-        <a href="{{ file.alternateLink }}" target="_blank"><img src="{{ file.iconLink }}" alt="file-icon"> {{ file.title }}</a>
+        <a href="{{ file.alternateLink }}" target="_blank" title="View file"><img src="{{ file.iconLink }}" alt="file-icon"> {{ file.title }}</a>
       </div>
 
       <div class="extension">
@@ -33,7 +33,11 @@
       </div>
 
       <div class="download">
-        <a href="{{ file.webContentLink }}" target="_blank" ng-show="file.fileExtension">Download</a>
+        <a href="{{ file.webContentLink }}" target="_blank" ng-show="file.fileExtension" title="Download file">Download</a>
+      </div>
+
+      <div class="delete">
+        <span class="icon-bin" ng-click="delete( file.id )" title="Delete file"></span>
       </div>
 
     </li>

@@ -17,7 +17,7 @@ rtStorage.controller('uploadController', function($scope, OAuth, GDocs) {
         $scope.uploading = true;
 
         GDocs.uploadFile( $scope.file, $scope.fileName ).then(function (resp) {
-          console.log(resp);
+          $scope.$emit('uploaded', 'refresh'); // emit uploaded event
         }).finally(function () {
           $scope.uploading = false;
         });

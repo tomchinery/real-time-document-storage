@@ -4,6 +4,7 @@ GDocs.factory('GDocs', function ($http, $cookieStore) {
   var api = {
     fetchFiles: fetchFiles,
     uploadFile: uploadFile,
+    deleteFile: deleteFile,
   };
 
   var config = {
@@ -16,6 +17,10 @@ GDocs.factory('GDocs', function ($http, $cookieStore) {
 
   function fetchFiles() {
     return $http.get('https://www.googleapis.com/drive/v2/files', config).then( handleSuccess, handleError );
+  }
+
+  function deleteFile( id ) {
+    return $http.delete('https://www.googleapis.com/drive/v2/files/' + id, config).then( handleSuccess, handleError);
   }
 
   function uploadFile( file, fileName ) {
