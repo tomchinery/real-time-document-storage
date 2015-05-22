@@ -1,6 +1,6 @@
 var rtStorage = angular.module('rtStorage', ['ngRoute', 'ngAnimate', 'angular-spinkit', 'OAuth', 'ngCookies', 'GDocs', 'angular-loading-bar']);
 
-rtStorage.config(['$routeProvider', '$locationProvider', function ($routeProvider) {
+rtStorage.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
   $routeProvider
 
   .when('/', {
