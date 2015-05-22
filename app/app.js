@@ -1,6 +1,6 @@
 var rtStorage = angular.module('rtStorage', ['ngRoute', 'ngAnimate', 'angular-spinkit', 'OAuth', 'ngCookies', 'GDocs', 'angular-loading-bar']);
 
-rtStorage.config(['$routeProvider', function ($routeProvider) {
+rtStorage.config(['$routeProvider', '$locationProvider', function ($routeProvider) {
   $routeProvider
 
   .when('/', {
@@ -21,5 +21,7 @@ rtStorage.config(['$routeProvider', function ($routeProvider) {
   .otherwise({
     redirectTo: '/'
   });
+
+  $locationProvider.html5Mode(true); // fix OAuth issues with /#/ in url
 
 }]);

@@ -10,7 +10,7 @@ OAuth.factory('OAuth', function ($routeParams, $cookieStore, $location, $interva
   function authURL() {
     var clientID = "822166841586-0l34mn5s7u7egt6bfc8b740fca5qmq7k.apps.googleusercontent.com";
     var driveScope = "https://www.googleapis.com/auth/drive";
-    var redirectURL = "http://goo.gl/B8AYiZ"; // link shortened to localhost
+    var redirectURL = "http://tomchinery.com/rtds/"; // link shortened to localhost
     var responseType = "token";
 
     var url =
