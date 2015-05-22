@@ -8,7 +8,7 @@ delete existing ones.
 
 Login via oAuth2.
 
-You can find the app running [here.](http://tomchinery.com/rtds/files). 
+You can find the app running [here.](http://tomchinery.com/rtds/) 
 
 ## Installation
 
