@@ -1,6 +1,7 @@
-## Synopsis
 
 ![ScreenShot](screenshot.png)
+
+## Synopsis
 
 An angular app that uses Google Drive to view a users files, upload new files or
 delete existing ones.
